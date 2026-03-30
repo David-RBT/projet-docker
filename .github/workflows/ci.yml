@@ -8,8 +8,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     -name: david-projet-docker
-    -uses: davidbekale/checkout@v2
-    -run: docker build -t david-projet-docker .
+      use: actions/checkout@v2
+    -run: docker build -t davidbekale/getting-started .
+    -name: Log in to Docker Hub
+      uses: docker/login-action@v2
+        with:
+          username: davidbekale
+          password: ${{ secrets.DOCKER_PASSWORD }}  
+
+    
+  
+  
+
+
+    
     
     
     
