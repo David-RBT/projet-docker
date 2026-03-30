@@ -9,6 +9,8 @@ jobs:
     steps:
     -name: david-projet-docker
     -uses: davidbekale/checkout@v2
+    -run: docker build -t david-projet-docker .
+    
     
     
       
